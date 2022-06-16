@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             "Hello first flutter output",
             style: TextStyle(
                 fontStyle: FontStyle.italic,
-                fontSize: 24,
+                fontSize: 23,
                 fontWeight: FontWeight.bold),
           ),
         ),
