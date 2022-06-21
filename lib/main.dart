@@ -1,26 +1,42 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(home: Home()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            "Hello first flutter output",
-            style: TextStyle(
-                fontStyle: FontStyle.italic,
-                fontSize: 23,
-                fontWeight: FontWeight.bold),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          "baby's breath",
+          style: TextStyle(
+            fontFamily: 'kurdish',
           ),
         ),
+        backgroundColor: Colors.pink,
+      ),
+      body: ListView(
+        children: [
+          Image.asset(
+            'assets/img/1.jpg',
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          Text(
+            "سیمبولی خۆشەویستی هەمیشەیی",
+            style: TextStyle(
+                fontFamily: 'kurdish',
+                color: Colors.pink,
+                fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          )
+        ],
       ),
     );
   }
